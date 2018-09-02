@@ -553,6 +553,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1645968816446604, guid: 4b974d27043843b4ca4166df8ea2b0b7,
     type: 2}
   m_PrefabInternal: {fileID: 141271882}
+--- !u!114 &1816901096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1816901095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f81713bc4a0574ca478e4a4f0ee00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bala: {fileID: 1036738504362820, guid: b4ea4535fdb088e419291afc44616bbc, type: 2}
+  salidaBala: {fileID: 29358044}
+  player: {fileID: 1816901095}
 --- !u!61 &1816901099
 BoxCollider2D:
   m_ObjectHideFlags: 0

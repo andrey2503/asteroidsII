@@ -31,8 +31,6 @@ public class player_inputs : MonoBehaviour {
 		}else if(moverUp < 0){
 			
 		}
-
-
 		float mover = Input.GetAxis ("Horizontal");
 		if (mover > 0) {
 			player_engine.instance.girarDerecha ();
@@ -41,6 +39,10 @@ public class player_inputs : MonoBehaviour {
 			player_engine.instance.girarIzquierda ();
 			//mover a la izquierda
 		}// fin de if izquierda Derecha
+
+		if(Input.GetKeyUp("space")){
+			player_disparo.instance.disparar();
+		}
 
 	}// fin de fixedupdate
 }

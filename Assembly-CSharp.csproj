@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\bala\player_disparo.cs" />
      <Compile Include="Assets\Scripts\player\player_engine.cs" />
      <Compile Include="Assets\Scripts\player\player_inputs.cs" />
  <Reference Include="UnityEditor.StandardEvents">
