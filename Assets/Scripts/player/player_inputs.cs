@@ -24,7 +24,7 @@ public class player_inputs : MonoBehaviour {
 	void FixedUpdate () {
 		float moverUp = Input.GetAxis ("Vertical");
 		if(moverUp > 0){
-			Debug.Log (moverUp);
+			//Debug.Log (moverUp);
 			Debug.Log ("se esta presionado arriba");
 			player_engine.instance.moverUP ();
 

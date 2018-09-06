@@ -26,21 +26,9 @@ public class player_engine : MonoBehaviour {
 	}
 
 	public void moverUP(){
-		//player.GetComponent<Rigidbody2D> ().velocity = new Vector2(mover,getVelocityPostY());
-		//var heading = up.transform.position - down.transform.position;
-		//var distance = heading.magnitude;
-		//var direction = heading / distance;
-		Debug.Log ("mover up");
-		//player.transform.position = up.transform.position;
 		player.transform.position = Vector3.Lerp(player.transform.position, up.transform.position, mover);
 	}// FIN DE MOVERuP
 
-	public void direccion(){
-		var heading = up.transform.position - down.transform.position;
-		var distance = heading.magnitude;
-		var direction = heading / distance;
-		Debug.Log (direction);
-	}
 
 	public void girarDerecha(){
 		player.transform.Rotate(Vector3.right * Time.deltaTime * velocidadRotacion);

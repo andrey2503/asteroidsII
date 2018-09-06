@@ -53,9 +53,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\asteroides\Comportamiento_asteroide.cs" />
+     <Compile Include="Assets\Scripts\asteroides\Control_asteroides.cs" />
      <Compile Include="Assets\Scripts\bala\player_disparo.cs" />
      <Compile Include="Assets\Scripts\player\player_engine.cs" />
      <Compile Include="Assets\Scripts\player\player_inputs.cs" />
+     <Compile Include="Assets\Scripts\puntos\Control_puntos.cs" />
+     <Compile Include="Assets\Scripts\tiempo\Tiempo_control.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>D:/UnityProjectsUcr/AsteroidsII/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

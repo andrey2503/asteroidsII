@@ -18,15 +18,8 @@ public class player_disparo : MonoBehaviour {
 	// Use this for initialization
 	public void disparar(){
 		GameObject disparo = Instantiate (bala,salidaBala.transform.position,player.transform.rotation);
-		disparo.GetComponent<Rigidbody> ().AddRelativeForce (new Vector2(0,3),ForceMode.VelocityChange);
-		StartCoroutine (destruirBala(disparo));
+		disparo.GetComponent<Rigidbody> ().AddRelativeForce (new Vector2(0,10),ForceMode.VelocityChange);
+		Destroy (disparo,1f);
 	}// fin de disparar
-
-	IEnumerator destruirBala(GameObject bala){
-		yield return  new WaitForSeconds(1f);
-		Destroy (bala);
-	}
-
-	
 
 }
