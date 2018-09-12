@@ -126,7 +126,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4294458316028954, guid: 4b974d27043843b4ca4166df8ea2b0b7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4294458316028954, guid: 4b974d27043843b4ca4166df8ea2b0b7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -138,7 +138,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4294458316028954, guid: 4b974d27043843b4ca4166df8ea2b0b7, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4294458316028954, guid: 4b974d27043843b4ca4166df8ea2b0b7, type: 2}
       propertyPath: m_LocalRotation.z
@@ -146,7 +146,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4294458316028954, guid: 4b974d27043843b4ca4166df8ea2b0b7, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4294458316028954, guid: 4b974d27043843b4ca4166df8ea2b0b7, type: 2}
       propertyPath: m_RootOrder
@@ -167,6 +167,45 @@ Prefab:
     - target: {fileID: 1857367143870234, guid: 4b974d27043843b4ca4166df8ea2b0b7, type: 2}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 61627181716543432, guid: 4b974d27043843b4ca4166df8ea2b0b7,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114327266332991236, guid: 4b974d27043843b4ca4166df8ea2b0b7,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114839888556511816, guid: 4b974d27043843b4ca4166df8ea2b0b7,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50024335974682890, guid: 4b974d27043843b4ca4166df8ea2b0b7,
+        type: 2}
+      propertyPath: m_UseFullKinematicContacts
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50024335974682890, guid: 4b974d27043843b4ca4166df8ea2b0b7,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294458316028954, guid: 4b974d27043843b4ca4166df8ea2b0b7, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50024335974682890, guid: 4b974d27043843b4ca4166df8ea2b0b7,
+        type: 2}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50024335974682890, guid: 4b974d27043843b4ca4166df8ea2b0b7,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b974d27043843b4ca4166df8ea2b0b7, type: 2}
@@ -539,7 +578,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 60
   orthographic: 1
   orthographic size: 8
@@ -565,7 +604,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1166406851}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -978,6 +1017,34 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1645968816446604, guid: 4b974d27043843b4ca4166df8ea2b0b7,
     type: 2}
   m_PrefabInternal: {fileID: 141271882}
+--- !u!114 &1816901096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1816901095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e771142c7ab7d854da3ae3c4772fcdf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1816901095}
+  velocidadMovimiento: 2
+  velocidadRotacion: 100
+  nuevaDireccion: {x: 0, y: 0, z: 0}
+--- !u!114 &1816901103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1816901095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd3c9daccc440b47965516f96a50f21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limiteHorizontal: 0
+  limiteVertical: 0
 --- !u!1 &1837278567
 GameObject:
   m_ObjectHideFlags: 0

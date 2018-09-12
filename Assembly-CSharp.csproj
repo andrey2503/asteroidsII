@@ -58,6 +58,8 @@
      <Compile Include="Assets\Scripts\bala\player_disparo.cs" />
      <Compile Include="Assets\Scripts\player\player_engine.cs" />
      <Compile Include="Assets\Scripts\player\player_inputs.cs" />
+     <Compile Include="Assets\Scripts\player\tutorial_movimiento.cs" />
+     <Compile Include="Assets\Scripts\player\WrapAroundRoom.cs" />
      <Compile Include="Assets\Scripts\puntos\Control_puntos.cs" />
      <Compile Include="Assets\Scripts\tiempo\Tiempo_control.cs" />
  <Reference Include="UnityEditor.StandardEvents">

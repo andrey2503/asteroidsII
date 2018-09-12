@@ -1,9 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\player\player_engine.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\player\tutorial_movimiento.cs">
     <Files>
-      <File FileName="Assets\Scripts\player\player_engine.cs" Line="34" Column="14" />
-      <File FileName="Assets\Scripts\player\player_inputs.cs" Line="26" Column="6" />
+      <File FileName="Assets\Scripts\puntos\Control_puntos.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\asteroides\Control_asteroides.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\asteroides\Comportamiento_asteroide.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\player\tutorial_movimiento.cs" Line="39" Column="64" />
+      <File FileName="Assets\Scripts\player\WrapAroundRoom.cs" Line="12" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
