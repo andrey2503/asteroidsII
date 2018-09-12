@@ -10,11 +10,13 @@ public class Control_asteroides : MonoBehaviour {
 	public float ancho;
 	public float alto;
 	public GameObject camara;
+	public float limiteHorizontal;
+	public float limiteVertical;
 	// Use this for initialization
 	void Start () {
+		limiteHorizontal= Camera.main.ScreenToWorldPoint(new Vector3(Screen.width,0,transform.position.z- Camera.main.transform.position.z)).x;
+		limiteVertical = Camera.main.ScreenToWorldPoint(new Vector3(0,Screen.height,transform.position.z- Camera.main.transform.position.z)).y;
 		GenerarAsterorides ();
-
-
 	}
 	
 	// Update is called once per frame
@@ -28,20 +30,20 @@ public class Control_asteroides : MonoBehaviour {
 		Debug.Log (direccion);
 		switch (direccion) {
 		case 1:
-			x =	Random.Range (player.transform.position.x, player.transform.position.x+14);	
-			y =	Random.Range (player.transform.position.y, player.transform.position.y+14);
+			x =	Random.Range (-limiteHorizontal,limiteHorizontal);	
+			y =	-limiteVertical;
 			break;
 		case 2:
-			x=	Random.Range (player.transform.position.x, player.transform.position.x-14);	
-			y=	Random.Range (player.transform.position.y, player.transform.position.x-14);
+			x =	Random.Range (-limiteHorizontal,limiteHorizontal);	
+			y =	limiteVertical;
 			break;
 		case 3:
-			x=	Random.Range (player.transform.position.x, player.transform.position.x+14);	
-			y=	Random.Range (player.transform.position.y, player.transform.position.y-14);
+			x =	-limiteHorizontal;	
+			y = Random.Range (-limiteVertical,limiteVertical);
 			break;
 		case 4:
-			x=	Random.Range (player.transform.position.x, player.transform.position.x-14);	
-			y=	Random.Range (player.transform.position.y, player.transform.position.y+14);
+			x =	limiteHorizontal;	
+			y = Random.Range (-limiteVertical,limiteVertical);
 			break;
 		}// fin de switch
 
