@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class tutorial_movimiento : MonoBehaviour {
 
-	public GameObject player;
 	public float velocidadMovimiento=0f;
 	public float velocidadRotacion=50f;
 	public Vector3 nuevaDireccion;
@@ -18,16 +17,6 @@ public class tutorial_movimiento : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		transform.Rotate (Vector3.forward,- velocidadRotacion * Input.GetAxis("Horizontal")* Time.deltaTime);
-
-		// movimiento kinematico, no afectado con fisica
-		/*
-		if(Input.GetKey(KeyCode.UpArrow)){
-			velocidadMovimiento += 0.1f;
-			nuevaDireccion = transform.right;
-		}
-		velocidadMovimiento = Mathf.Clamp (velocidadMovimiento,0,10);
-		player.transform.Translate (nuevaDireccion*velocidadMovimiento*Time.deltaTime,Space.World);
-		*/
 	}// fin del update
 
 	void FixedUpdate(){

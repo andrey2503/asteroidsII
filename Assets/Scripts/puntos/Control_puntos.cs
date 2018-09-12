@@ -21,7 +21,7 @@ public class Control_puntos : MonoBehaviour {
 		puntos.text = "0000";
 	}
 
-	void sumarPuntos(int puntosganados){
+	public void sumarPuntos(int puntosganados){
 		puntoFinales+= puntosganados ;
 		puntos.text = ""+puntoFinales;
 	}// fin de sumar Puntos

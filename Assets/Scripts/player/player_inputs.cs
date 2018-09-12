@@ -5,6 +5,10 @@ using UnityEngine;
 public class player_inputs : MonoBehaviour {
 	
 	public static player_inputs instance;
+	public float velocidadRotacion=50f;
+	//public float velocidadMovimiento=0f;
+	Rigidbody2D mirigidbody;
+	public Vector3 nuevaDireccion;
 	void Awake(){
 		if(player_inputs.instance == null){
 			player_inputs.instance = this;
@@ -14,35 +18,28 @@ public class player_inputs : MonoBehaviour {
 	}// fin del Awake
 	// Use this for initialization
 	void Start () {
-		
+		nuevaDireccion = transform.right;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		transform.Rotate (Vector3.forward,- velocidadRotacion * Input.GetAxis("Horizontal")* Time.deltaTime);
 	}
-	void FixedUpdate () {
-		float moverUp = Input.GetAxis ("Vertical");
-		if(moverUp > 0){
-			//Debug.Log (moverUp);
-			Debug.Log ("se esta presionado arriba");
-			player_engine.instance.moverUP ();
 
-		}else if(moverUp < 0){
-			
-		}
-		float mover = Input.GetAxis ("Horizontal");
-		if (mover > 0) {
-			player_engine.instance.girarDerecha ();
-			//mover a la derecha
-		} else if (mover < 0) {
-			player_engine.instance.girarIzquierda ();
-			//mover a la izquierda
-		}// fin de if izquierda Derecha
-
+	void FixedUpdate(){
+		// movimiento no kinematico, afectado por fisicas
+		//velocidadMovimiento = Mathf.Clamp (velocidadMovimiento,0,10);
+		if (Input.GetKey (KeyCode.UpArrow)) {
+			//mirigidbody.AddForce (transform.up * velocidadMovimiento);
+			player_engine.instance.moverUP();
+		}// fin del if
+		//velocidadMovimiento = Mathf.Clamp (velocidadMovimiento,0,5);
 		if(Input.GetKeyUp("space")){
 			player_disparo.instance.disparar();
 		}
+		if(Input.GetKeyDown("space")){
+			player_disparo.instance.disparoCero();
+		}
+	}// fin de fixdUpdate
 
-	}// fin de fixedupdate
 }

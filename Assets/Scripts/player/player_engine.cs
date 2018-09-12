@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class player_engine : MonoBehaviour {
-	public GameObject player;
-	public GameObject up;
-	public GameObject down;
+	
 	public static player_engine instance;
-	public float mover=0.50f;
-	public float velocidadRotacion=0.05f;
+	Rigidbody2D mirigidbody;
 	// Use this for initialization
+	public float velocidadMovimiento=0f;
 	void Awake(){
 		if(player_engine.instance == null){
 			player_engine.instance = this;
@@ -18,24 +16,14 @@ public class player_engine : MonoBehaviour {
 		}// else
 	}// fin del Awake
 	void Start () {
-		
+		mirigidbody = GetComponent<Rigidbody2D> ();
 	}
 
-	public float getVelocityPostY (){
-		return  player.GetComponent<Rigidbody2D> ().velocity.y;
-	}
+
 
 	public void moverUP(){
-		player.transform.position = Vector3.Lerp(player.transform.position, up.transform.position, mover);
+		mirigidbody.AddForce (transform.up * velocidadMovimiento);
+		velocidadMovimiento = Mathf.Clamp (velocidadMovimiento,0,10);
 	}// FIN DE MOVERuP
-
-
-	public void girarDerecha(){
-		player.transform.Rotate(Vector3.right * Time.deltaTime * velocidadRotacion);
-	}// fin de girar derecha
-
-	public void girarIzquierda(){
-		player.transform.Rotate(Vector3.left * Time.deltaTime * velocidadRotacion);
-	}
 
 }

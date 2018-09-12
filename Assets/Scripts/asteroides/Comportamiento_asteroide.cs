@@ -5,7 +5,7 @@ using UnityEngine;
 public class Comportamiento_asteroide : MonoBehaviour {
 
 	//int direccionx=1,direcciony=1,direccionz=1;
-	int velocidad=1;
+
 	Rigidbody2D rigid;
 	float velocidadRotacion=1f;
 	float velocidadMovimiento=5f;
@@ -43,7 +43,7 @@ public class Comportamiento_asteroide : MonoBehaviour {
 		}// fin de switch
 	}// fin de direccion
 	 void velocidad_asteroide(){
-		velocidadMovimiento = Random.Range (1,5);
+		velocidadMovimiento = Random.Range (1,3);
 	}// fin de direccion
 
 	void rotacion_asteroide(){

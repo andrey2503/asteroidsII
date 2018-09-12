@@ -1,12 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\player\tutorial_movimiento.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\asteroides\Control_asteroides.cs">
     <Files>
       <File FileName="Assets\Scripts\puntos\Control_puntos.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\asteroides\Control_asteroides.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\asteroides\Comportamiento_asteroide.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\player\tutorial_movimiento.cs" Line="39" Column="64" />
-      <File FileName="Assets\Scripts\player\WrapAroundRoom.cs" Line="12" Column="24" />
+      <File FileName="Assets\Scripts\asteroides\Control_asteroides.cs" Line="17" Column="1" />
+      <File FileName="Assets\Scripts\asteroides\Comportamiento_asteroide.cs" Line="18" Column="3" />
+      <File FileName="Assets\Scripts\player\tutorial_movimiento.cs" Line="33" Column="2" />
+      <File FileName="Assets\Scripts\player\WrapAroundRoom.cs" Line="7" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
