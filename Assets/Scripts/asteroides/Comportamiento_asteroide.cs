@@ -10,37 +10,44 @@ public class Comportamiento_asteroide : MonoBehaviour {
 	float velocidadRotacion=1f;
 	float velocidadMovimiento=5f;
 	Vector3 direccion;
+	int cantidadAsteroides;
+	int limiteCantidadAsteroides;
+	float tiempoCreacionAsteroides=2f;
 	void Start () {
 		direccion_asteroide();
 		velocidad_asteroide ();
 		rotacion_asteroide ();
 		rigid = GetComponent<Rigidbody2D>();
+		Debug.Log ("asteroides moviendoce"+direccion * velocidadMovimiento);
+		rigid.AddForce (direccion * velocidadMovimiento,ForceMode2D.Impulse);
+		velocidadMovimiento = Mathf.Clamp (velocidadMovimiento,0,5);
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		transform.Rotate (Vector3.forward,velocidadRotacion *  Time.deltaTime);
-		//transform.Translate(new Vector3(1,1,1) * Time.deltaTime*velocidad, Space.World);
-		//transform.Translate (new Vector3(direccionx+direccionx,direcciony+direcciony,direccionz+direccionz));
 	}
 		
 	 void direccion_asteroide(){
 		int direccionNumero = Random.Range (1,5);
-		switch (direccionNumero) {
+		int x=Random.Range (-5,5), y = Random.Range (-5, 5);
+		direccion = new Vector3 (x,y,0f);
+		/*switch (direccionNumero) {
 		case 1:
-			direccion = Vector3.up;
+			direccion = new Vector3 (0f,direccionNumero,0f);
 			break;
 		case 2:
-			direccion = Vector3.down;
+			direccion = new Vector3 (0f,-direccionNumero,0f);
 			break;
 		case 3:
-			direccion = Vector3.left;
+			direccion =new Vector3 (-direccionNumero,0f,0f);
 			break;
 		case 4:
-			direccion = Vector3.right;
+			direccion = new Vector3 (direccionNumero,0f,0f);
 			break;
 		}// fin de switch
+*/
 	}// fin de direccion
 	 void velocidad_asteroide(){
 		velocidadMovimiento = Random.Range (1,3);
@@ -51,8 +58,6 @@ public class Comportamiento_asteroide : MonoBehaviour {
 	}// fin de direccion
 
 	void FixedUpdate(){
-		Debug.Log ("asteroides moviendoce");
-		rigid.AddForce (direccion * velocidadMovimiento);
-		velocidadMovimiento = Mathf.Clamp (velocidadMovimiento,0,5);
+		
 	}// fin de fixdUpdate
 }

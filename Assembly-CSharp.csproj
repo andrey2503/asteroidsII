@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\asteroides\colision_bala.cs" />
      <Compile Include="Assets\Scripts\asteroides\Comportamiento_asteroide.cs" />
      <Compile Include="Assets\Scripts\asteroides\Control_asteroides.cs" />
+     <Compile Include="Assets\Scripts\asteroides\WrapAroundRoomAsteroids.cs" />
      <Compile Include="Assets\Scripts\bala\player_disparo.cs" />
      <Compile Include="Assets\Scripts\player\player_engine.cs" />
      <Compile Include="Assets\Scripts\player\player_inputs.cs" />

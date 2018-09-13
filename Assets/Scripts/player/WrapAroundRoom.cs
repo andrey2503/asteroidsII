@@ -6,7 +6,17 @@ public class WrapAroundRoom : MonoBehaviour {
 
 	public float limiteHorizontal;
 	public float limiteVertical;
+	public static WrapAroundRoom instance;
 	// Use this for initialization
+
+	void Awake(){
+		if(instance==null){
+			instance = this;
+		}else{
+			Destroy (this.gameObject);
+		}
+	}//fin del awake
+
 	void Start () {
 		//limiteHorizontal = 13.32f;
 		//limiteVertical = 9.54f;
@@ -29,4 +39,12 @@ public class WrapAroundRoom : MonoBehaviour {
 			transform.position = new Vector3 (transform.position.x,limiteVertical,0);
 		}
 	}// fin del update
-}
+
+	public float getLimiteHorizontal(){
+		return limiteHorizontal;
+	}//fin de getLimiteHorizontal
+	public float getLimiteVertical(){
+		return limiteVertical;
+	}//fin de getLimiteVertical
+
+}// fin de la clase

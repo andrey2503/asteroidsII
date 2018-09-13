@@ -12,16 +12,21 @@ public class Control_asteroides : MonoBehaviour {
 	public GameObject camara;
 	public float limiteHorizontal;
 	public float limiteVertical;
+	int limiteAsteroides=1;
+	bool activar_asteroide=true;
 	// Use this for initialization
 	void Start () {
 		limiteHorizontal= Camera.main.ScreenToWorldPoint(new Vector3(Screen.width,0,transform.position.z- Camera.main.transform.position.z)).x;
 		limiteVertical = Camera.main.ScreenToWorldPoint(new Vector3(0,Screen.height,transform.position.z- Camera.main.transform.position.z)).y;
-		GenerarAsterorides ();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(limiteAsteroides <15 && activar_asteroide==true){
+			activar_asteroide = false;
+			StartCoroutine (GenerarAteroides());
+		}
 	}
 
 	Vector3 crearPosicion(){
@@ -31,18 +36,18 @@ public class Control_asteroides : MonoBehaviour {
 		switch (direccion) {
 		case 1:
 			x =	Random.Range (-limiteHorizontal,limiteHorizontal);	
-			y =	-limiteVertical;
+			y =	-limiteVertical-3;
 			break;
 		case 2:
 			x =	Random.Range (-limiteHorizontal,limiteHorizontal);	
-			y =	limiteVertical;
+			y =	limiteVertical+3;
 			break;
 		case 3:
-			x =	-limiteHorizontal;	
+			x =	-limiteHorizontal-3;	
 			y = Random.Range (-limiteVertical,limiteVertical);
 			break;
 		case 4:
-			x =	limiteHorizontal;	
+			x =	limiteHorizontal+3;	
 			y = Random.Range (-limiteVertical,limiteVertical);
 			break;
 		}// fin de switch
@@ -51,16 +56,14 @@ public class Control_asteroides : MonoBehaviour {
 	}//
 
 	void GenerarAsterorides(){
-		for(int i=0;i<10;i++){
+			limiteAsteroides++;
 			GameObject asteroide = Instantiate(asteroide_pequeno,crearPosicion(),player.transform.rotation);
-			Destroy (asteroide,10f);
-		}
-			StartCoroutine (GenerarAteroides());
 	}// fin de generar Asteroides
 
 	IEnumerator GenerarAteroides(){
-		yield return new WaitForSeconds (10f);
+		yield return new WaitForSeconds (1f);
 		GenerarAsterorides ();
+		activar_asteroide = true;
 	}//
 
 	/*public void disparar(){
