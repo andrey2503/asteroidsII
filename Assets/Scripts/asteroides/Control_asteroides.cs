@@ -51,7 +51,7 @@ public class Control_asteroides : MonoBehaviour {
 	}//
 
 	void GenerarAsterorides(){
-		for(int i=0;i<5;i++){
+		for(int i=0;i<10;i++){
 			GameObject asteroide = Instantiate(asteroide_pequeno,crearPosicion(),player.transform.rotation);
 			Destroy (asteroide,10f);
 		}
