@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\player\WrapAroundRoom.cs" />
      <Compile Include="Assets\Scripts\puntos\Control_puntos.cs" />
      <Compile Include="Assets\Scripts\tiempo\Tiempo_control.cs" />
+     <Compile Include="Assets\Scripts\vida\ControlVida.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>D:/UnityProjectsUcr/AsteroidsII/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

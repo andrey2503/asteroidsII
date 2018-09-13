@@ -40,6 +40,12 @@ public class player_inputs : MonoBehaviour {
 		if(Input.GetKeyDown("space")){
 			player_disparo.instance.disparoCero();
 		}
+		if(Input.GetKeyDown(KeyCode.Z)){
+			player_disparo.instance.disparoCero();
+		}
+		if(Input.GetKeyUp(KeyCode.Z)){
+			player_disparo.instance.disparar();
+		}
 	}// fin de fixdUpdate
 
 }

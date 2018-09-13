@@ -15,6 +15,15 @@ public class Control_asteroides : MonoBehaviour {
 	int limiteAsteroides=1;
 	bool activar_asteroide=true;
 	// Use this for initialization
+	public static Control_asteroides instance;
+	void Awake(){
+		if (instance == null) {
+			instance = this;
+		} else {
+			Destroy (this.gameObject);
+		}
+	}
+
 	void Start () {
 		limiteHorizontal= Camera.main.ScreenToWorldPoint(new Vector3(Screen.width,0,transform.position.z- Camera.main.transform.position.z)).x;
 		limiteVertical = Camera.main.ScreenToWorldPoint(new Vector3(0,Screen.height,transform.position.z- Camera.main.transform.position.z)).y;
@@ -23,7 +32,7 @@ public class Control_asteroides : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(limiteAsteroides <15 && activar_asteroide==true){
+		if(limiteAsteroides <5 && activar_asteroide==true){
 			activar_asteroide = false;
 			StartCoroutine (GenerarAteroides());
 		}
@@ -66,10 +75,8 @@ public class Control_asteroides : MonoBehaviour {
 		activar_asteroide = true;
 	}//
 
-	/*public void disparar(){
-		GameObject disparo = Instantiate (bala,salidaBala.transform.position,player.transform.rotation);
-		disparo.GetComponent<Rigidbody> ().AddRelativeForce (new Vector2(0,10),ForceMode.VelocityChange);
-		Destroy (disparo,1f);
-	}// fin de disparar
-	*/
+	public void subirNumeroAsteroides(){
+		limiteAsteroides--;
+	}
+
 }
