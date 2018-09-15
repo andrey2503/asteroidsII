@@ -39,7 +39,6 @@ public class colision_bala : MonoBehaviour {
 		}
 		if(meta.gameObject.tag=="Player"){
 			ControlVida.instance.disminuirVida ();
-			ControlVida.instance.reiniciarPersonaje ();
 			Destroy (meta.gameObject);
 			Destroy (this.gameObject);
 		}

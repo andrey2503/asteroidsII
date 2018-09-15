@@ -23,7 +23,10 @@ public class Comportamiento_asteroide : MonoBehaviour {
 		velocidadMovimiento = Mathf.Clamp (velocidadMovimiento,0,5);
 
 	}
-	
+
+	public void Destruir(){
+		Destroy (this.gameObject,1f);
+	}
 	// Update is called once per frame
 	void Update () {
 		transform.Rotate (Vector3.forward,velocidadRotacion*Time.deltaTime);

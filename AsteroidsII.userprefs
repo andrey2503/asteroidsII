@@ -1,12 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\asteroides\Control_asteroides.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\vida\ControlVida.cs">
     <Files>
-      <File FileName="Assets\Scripts\asteroides\Comportamiento_asteroide.cs" Line="31" Column="3" />
-      <File FileName="Assets\Scripts\asteroides\Control_asteroides.cs" Line="35" Column="25" />
-      <File FileName="Assets\Scripts\vida\ControlVida.cs" Line="22" Column="17" />
-      <File FileName="Assets\Scripts\asteroides\colision_bala.cs" Line="20" Column="28" />
-      <File FileName="Assets\Scripts\player\player_inputs.cs" Line="46" Column="21" />
+      <File FileName="Assets\Scripts\asteroides\Comportamiento_asteroide.cs" Line="16" Column="1" />
+      <File FileName="Assets\Scripts\vida\ControlVida.cs" Line="44" Column="36" />
+      <File FileName="Assets\Scripts\asteroides\colision_bala.cs" Line="41" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
