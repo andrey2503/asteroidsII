@@ -6,14 +6,13 @@ public class Control_asteroides : MonoBehaviour {
 	public GameObject asteroide_pequeno;
 	public GameObject asteroide_mediano;
 	public GameObject asteroide_grande;
-	public GameObject player;
 	public float ancho;
 	public float alto;
-	public GameObject camara;
 	public float limiteHorizontal;
 	public float limiteVertical;
-	int limiteAsteroides=1;
-	bool activar_asteroide=true;
+	int limiteAsteroidesGrandes=1;
+	int limiteAsteroidesMedianos=1;
+	bool activar_asteroide = true, activar_asteroideMediado = true;
 	// Use this for initialization
 	public static Control_asteroides instance;
 	void Awake(){
@@ -32,9 +31,13 @@ public class Control_asteroides : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(limiteAsteroides <5 && activar_asteroide==true){
+		if(limiteAsteroidesGrandes <3 && activar_asteroide==true){
 			activar_asteroide = false;
-			StartCoroutine (GenerarAteroides());
+			StartCoroutine (GenerarAsteroidesGrandes());
+		}
+		if(limiteAsteroidesMedianos < 5 && activar_asteroideMediado==true){
+			activar_asteroideMediado = false;
+			StartCoroutine (GenerarAsteroidesMedianos());
 		}
 	}
 
@@ -65,18 +68,32 @@ public class Control_asteroides : MonoBehaviour {
 	}//
 
 	void GenerarAsterorides(){
-			limiteAsteroides++;
-			GameObject asteroide = Instantiate(asteroide_pequeno,crearPosicion(),player.transform.rotation);
+			limiteAsteroidesGrandes++;
+			GameObject asteroide = Instantiate(asteroide_grande,crearPosicion(),asteroide_grande.transform.rotation);
 	}// fin de generar Asteroides
 
-	IEnumerator GenerarAteroides(){
+	void GenerarAsteroidesMedia(){
+		GameObject asteroideMediano = Instantiate(asteroide_mediano,crearPosicion(),asteroide_mediano.transform.rotation);
+		limiteAsteroidesMedianos++;
+	}
+
+	IEnumerator GenerarAsteroidesGrandes(){
 		yield return new WaitForSeconds (1f);
 		GenerarAsterorides ();
 		activar_asteroide = true;
 	}//
 
-	public void subirNumeroAsteroides(){
-		limiteAsteroides--;
-	}
 
+	IEnumerator GenerarAsteroidesMedianos(){
+		yield return new WaitForSeconds (1f);
+		GenerarAsteroidesMedia ();
+		activar_asteroideMediado = true;
+	}//
+
+	public void subirNumeroAsteroidesGrandes(){
+		limiteAsteroidesGrandes--;
+	}
+	public void subirNumeroAsteroidesMedianos(){
+		limiteAsteroidesMedianos--;
+	}
 }

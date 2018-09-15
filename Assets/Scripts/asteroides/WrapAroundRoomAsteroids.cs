@@ -8,8 +8,8 @@ public class WrapAroundRoomAsteroids : MonoBehaviour {
 	public float limiteHorizontal;
 	public float limiteVertical;
 	void Start () {
-		limiteHorizontal=WrapAroundRoom.instance.getLimiteHorizontal ();
-		limiteVertical = WrapAroundRoom.instance.getLimiteVertical ();
+		limiteHorizontal= Camera.main.ScreenToWorldPoint(new Vector3(Screen.width,0,transform.position.z- Camera.main.transform.position.z)).x;
+		limiteVertical = Camera.main.ScreenToWorldPoint(new Vector3(0,Screen.height,transform.position.z- Camera.main.transform.position.z)).y;
 	}
 	
 	// Update is called once per frame

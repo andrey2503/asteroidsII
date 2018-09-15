@@ -7,6 +7,7 @@ public class ControlVida : MonoBehaviour {
 	public GameObject[] vidas;
 	int cuentavidas=2;
 	public static ControlVida instance;
+	public GameObject player;
 	// Use this for initialization
 
 	void Awake(){
@@ -21,5 +22,14 @@ public class ControlVida : MonoBehaviour {
 		vidas [cuentavidas].SetActive (false);
 		cuentavidas--;
 	}// fin de dismiuirVida
+
+	public void reiniciarPersonaje(){
+		StartCoroutine (crearPersonaje());
+	}
+
+	IEnumerator crearPersonaje(){
+		yield return new WaitForSeconds (2f);
+		Instantiate (player,player.transform.position,player.transform.rotation);
+	}
 
 }//fin de la clase
