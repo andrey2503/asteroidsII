@@ -23,7 +23,8 @@ public class player_disparo : MonoBehaviour {
 		balas++;
 		GameObject disparo = Instantiate (bala,salidaBala.transform.position,player.transform.rotation);
 		disparo.GetComponent<Rigidbody2D> ().AddRelativeForce (new Vector2(0f,fuerzaBala),ForceMode2D.Impulse);
-		Destroy (disparo,1f);
+		ControlSonido.instance.sonidoDisparo ();
+		Destroy (disparo,2f);
 		}
 	}// fin de disparar
 

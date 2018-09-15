@@ -22,6 +22,7 @@ public class colision_bala : MonoBehaviour {
 			Control_puntos.instance.sumarPuntos (20);
 			Instantiate (asteroidePequeno,meta.gameObject.transform.position,meta.gameObject.transform.rotation);
 			Instantiate (asteroidePequeno,meta.gameObject.transform.position,meta.gameObject.transform.rotation);
+			ControlSonido.instance.sonidoExplosionAsteroide (1f);
 			Destroy (this.gameObject);			
 		}
 
@@ -30,16 +31,19 @@ public class colision_bala : MonoBehaviour {
 			Control_asteroides.instance.subirNumeroAsteroidesMedianos ();
 			Control_puntos.instance.sumarPuntos (50);
 			Instantiate (asteroidePequeno,meta.gameObject.transform.position,meta.gameObject.transform.rotation);
+			ControlSonido.instance.sonidoExplosionAsteroide (0.50f);
 			Destroy (this.gameObject);			
 		}
 
 		if(meta.gameObject.tag=="bala" && tipoAsteroide==3){
 			Control_puntos.instance.sumarPuntos (100);
+			ControlSonido.instance.sonidoExplosionAsteroide (0.20f);
 			Destroy (this.gameObject);			
 		}
 		if(meta.gameObject.tag=="Player"){
 			ControlVida.instance.disminuirVida ();
 			Destroy (meta.gameObject);
+			ControlSonido.instance.sonidoMuerteJugador ();
 			Destroy (this.gameObject);
 		}
 	}// fin de onColisionEnter
