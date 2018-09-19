@@ -44,7 +44,7 @@ public class Control_asteroides : MonoBehaviour {
 	Vector3 crearPosicion(){
 		int direccion = Random.Range (1,5);
 		float x=1f,y=1f;
-		Debug.Log (direccion);
+		//Debug.Log (direccion);
 		switch (direccion) {
 		case 1:
 			x =	Random.Range (-limiteHorizontal,limiteHorizontal);	

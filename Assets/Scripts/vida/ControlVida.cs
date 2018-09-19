@@ -9,6 +9,7 @@ public class ControlVida : MonoBehaviour {
 	public static ControlVida instance;
 	public GameObject player;
 	public GameObject gameOver;
+	public GameObject guardarPuntaje;
 	// Use this for initialization
 
 	void Awake(){
@@ -57,6 +58,14 @@ public class ControlVida : MonoBehaviour {
 	IEnumerator aparecerGameOver(){
 		yield return new WaitForSeconds (3f);
 		gameOver.SetActive (true);
+		StartCoroutine (aparecerGuardarPuntaje());
 	}
+
+	IEnumerator aparecerGuardarPuntaje(){
+		yield return new WaitForSeconds (1f);
+		guardarPuntaje.SetActive (true);
+	}
+
+
 
 }//fin de la clase

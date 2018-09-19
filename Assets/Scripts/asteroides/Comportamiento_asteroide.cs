@@ -18,7 +18,7 @@ public class Comportamiento_asteroide : MonoBehaviour {
 		velocidad_asteroide ();
 		rotacion_asteroide ();
 		rigid = GetComponent<Rigidbody2D>();
-		Debug.Log ("asteroides moviendoce"+direccion * velocidadMovimiento);
+		//Debug.Log ("asteroides moviendoce"+direccion * velocidadMovimiento);
 		rigid.AddRelativeForce (direccion * velocidadMovimiento,ForceMode2D.Force);
 		velocidadMovimiento = Mathf.Clamp (velocidadMovimiento,0,5);
 
@@ -46,8 +46,5 @@ public class Comportamiento_asteroide : MonoBehaviour {
 	void rotacion_asteroide(){
 		velocidadRotacion = Random.Range (50,200);
 	}// fin de direccion
-
-	void FixedUpdate(){
 		
-	}// fin de fixdUpdate
 }

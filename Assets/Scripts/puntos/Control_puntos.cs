@@ -6,7 +6,7 @@ public class Control_puntos : MonoBehaviour {
 
 	public Text puntos;
 	public int puntoFinales=0000;
-
+	public Text nombreJugador;
 	public static Control_puntos instance;
 	void Awake(){
 		if(instance== null){
@@ -26,4 +26,11 @@ public class Control_puntos : MonoBehaviour {
 		puntos.text = ""+puntoFinales;
 	}// fin de sumar Puntos
 
+	public int getPuntosFinales(){
+		return puntoFinales;
+	}// fin de getPuntosFinales
+		
+	public string nombredelJugador(){
+		return this.nombreJugador.text;	
+	}//
 }
