@@ -1,12 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\asteroides\Control_asteroides.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\vida\ControlVida.cs">
     <Files>
-      <File FileName="Assets\Scripts\bala\player_disparo.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\sonido\ControlSonido.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\puntajes\ControlPuntajes.cs" Line="34" Column="56" />
-      <File FileName="Assets\Scripts\asteroides\Comportamiento_asteroide.cs" Line="49" Column="3" />
-      <File FileName="Assets\Scripts\asteroides\Control_asteroides.cs" Line="47" Column="5" />
+      <File FileName="Assets\Scripts\puntajes\ControlPuntajes.cs" Line="45" Column="6" />
+      <File FileName="..\..\apis\apiasteroides\src\routes\asteroideRoutes.js" Line="19" Column="3" />
+      <File FileName="..\..\apis\apiasteroides\src\models\modeloAsteroides.js" Line="72" Column="88" />
+      <File FileName="..\..\reactprojects\tuulsapi\src\models\user.js" Line="231" Column="30" />
+      <File FileName="Assets\Scripts\vida\ControlVida.cs" Line="61" Column="43" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
