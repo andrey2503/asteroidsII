@@ -33,6 +33,9 @@ public class player_inputs : MonoBehaviour {
 			//mirigidbody.AddForce (transform.up * velocidadMovimiento);
 			player_engine.instance.moverUP();
 		}// fin del if
+		if(Input.GetKeyUp(KeyCode.DownArrow)){
+			player_engine.instance.hiperespacio ();
+		}//
 		//velocidadMovimiento = Mathf.Clamp (velocidadMovimiento,0,5);
 		if(Input.GetKeyUp("space")){
 			player_disparo.instance.disparar();
