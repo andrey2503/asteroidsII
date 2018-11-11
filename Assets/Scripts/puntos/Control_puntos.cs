@@ -24,6 +24,12 @@ public class Control_puntos : MonoBehaviour {
 	public void sumarPuntos(int puntosganados){
 		puntoFinales+= puntosganados ;
 		puntos.text = ""+puntoFinales;
+		Debug.Log ("sumar "+puntoFinales);
+		if(puntoFinales>=1000){
+			Debug.Log ("iniciar");
+			GameControl.instance.numerodialogo = 1;
+			ControlEscenas.instance.IniciarJuego ();
+		}
 	}// fin de sumar Puntos
 
 	public int getPuntosFinales(){

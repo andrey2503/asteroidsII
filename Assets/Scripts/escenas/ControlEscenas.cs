@@ -22,7 +22,7 @@ public class ControlEscenas : MonoBehaviour {
 	}
 
 	public void IniciarJuego(){
-		SceneManager.LoadScene (1);	
+		SceneManager.LoadScene ("Story");	
 	}//
 
 }
