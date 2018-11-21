@@ -20,31 +20,27 @@ public class ControlVida : MonoBehaviour {
 		}
 	}// fin de awake
 
+	void Start(){
+		cuentavidas=GameControl.instance.vidasActuales;
+		refrescarVidas ();
+	}
+
 	public void disminuirVida(){
 		vidas [cuentavidas].SetActive (false);
 		cuentavidas--;
+		GameControl.instance.vidasActuales = cuentavidas;
 		if (cuentavidas == -1) {
-			/*GameObject[] respawns1 = GameObject.FindGameObjectsWithTag("asteroide1");
-			GameObject[] respawns2 = GameObject.FindGameObjectsWithTag("asteroide2");
-			GameObject[] respawns3 = GameObject.FindGameObjectsWithTag("asteroide3");
-			foreach (GameObject respawn in respawns1)
-			{
-				Destroy (respawn,1f);
-			}
-			foreach (GameObject respawn in respawns2)
-			{
-				Destroy (respawn,1f);
-			}
-			foreach (GameObject respawn in respawns2)
-			{
-				Destroy (respawn,1f);
-			}
-			*/
 			StartCoroutine (aparecerGameOver ());
 		} else {
 			StartCoroutine (crearPersonaje());
 		}// din del else
 	}// fin de dismiuirVida
+
+	public void refrescarVidas(){
+		for(int i=0;i<=cuentavidas;i++){
+			vidas [i].SetActive (true);
+		}
+	}
 
 	public void reiniciarPersonaje(){
 		StartCoroutine (crearPersonaje());
@@ -57,6 +53,7 @@ public class ControlVida : MonoBehaviour {
 
 	IEnumerator aparecerGameOver(){
 		yield return new WaitForSeconds (3f);
+		GameControl.instance.numerodialogo = 0;
 		gameOver.SetActive (true);
 		StartCoroutine (aparecerGuardarPuntaje());
 	}

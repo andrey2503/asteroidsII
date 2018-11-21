@@ -6,7 +6,7 @@ public class Control_puntos : MonoBehaviour {
 
 	public Text puntos;
 	public int puntoFinales=0000;
-	public Text nombreJugador;
+	public Text puntosObtenidos;
 	public static Control_puntos instance;
 	void Awake(){
 		if(instance== null){
@@ -18,15 +18,22 @@ public class Control_puntos : MonoBehaviour {
 
 
 	void Start () {
-		puntos.text = "0000";
+		puntos.text = GameControl.instance.puntosActuales+"";
+		puntoFinales = GameControl.instance.puntosActuales;
+	}
+
+	public void setpuntosfinales(int numero){
+		puntosObtenidos.text = numero + "";
 	}
 
 	public void sumarPuntos(int puntosganados){
 		puntoFinales+= puntosganados ;
 		puntos.text = ""+puntoFinales;
-		Debug.Log ("sumar "+puntoFinales);
-		if(puntoFinales>=1000){
+		GameControl.instance.puntosActuales = puntoFinales;
+		puntosObtenidos.text = "" + puntoFinales;
+		if(puntoFinales>=GameControl.instance.puntosLlegar){
 			Debug.Log ("iniciar");
+			GameControl.instance.puntosLlegar = GameControl.instance.puntosLlegar + 1000;
 			GameControl.instance.numerodialogo = 1;
 			ControlEscenas.instance.IniciarJuego ();
 		}
@@ -36,7 +43,5 @@ public class Control_puntos : MonoBehaviour {
 		return puntoFinales;
 	}// fin de getPuntosFinales
 		
-	public string nombredelJugador(){
-		return this.nombreJugador.text;	
-	}//
+
 }

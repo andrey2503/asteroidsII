@@ -21,6 +21,12 @@ public class ControlEscenas : MonoBehaviour {
 		
 	}
 
+	public void IniciarMenu(){
+		GameControl.instance.guardarPuntaje ();
+		Destroy (GameControl.instance.gameObject);
+		SceneManager.LoadScene ("Menu");	
+	}// iniciar menu
+
 	public void IniciarJuego(){
 		SceneManager.LoadScene ("Story");	
 	}//

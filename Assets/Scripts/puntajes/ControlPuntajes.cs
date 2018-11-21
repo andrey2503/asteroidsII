@@ -48,7 +48,7 @@ public class ControlPuntajes : MonoBehaviour {
 	}// fin de guardar puntaje
 
 	public void eventoBoton(){
-		StartCoroutine (savedScore(Control_puntos.instance.nombredelJugador(),Control_puntos.instance.getPuntosFinales()+"" ));
+		//StartCoroutine (savedScore(Control_puntos.instance.nombredelJugador(),Control_puntos.instance.getPuntosFinales()+"" ));
 		//Debug.Log ("nombre "+ Control_puntos.instance.nombredelJugador() +" puntos"+Control_puntos.instance.getPuntosFinales());	
 	}//
 
