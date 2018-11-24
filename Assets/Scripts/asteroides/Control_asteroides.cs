@@ -14,6 +14,9 @@ public class Control_asteroides : MonoBehaviour {
 	int limiteAsteroidesMedianos=1;
 	bool activar_asteroide = true, activar_asteroideMediado = true;
 	// Use this for initialization
+
+
+
 	public static Control_asteroides instance;
 	void Awake(){
 		if (instance == null) {
@@ -28,14 +31,15 @@ public class Control_asteroides : MonoBehaviour {
 		limiteVertical = Camera.main.ScreenToWorldPoint(new Vector3(0,Screen.height,transform.position.z- Camera.main.transform.position.z)).y;
 
 	}
-	
+
+
 	// Update is called once per frame
 	void Update () {
-		if(limiteAsteroidesGrandes <3 && activar_asteroide==true){
+		if(limiteAsteroidesGrandes < GameControl.instance.subirNivelAsteroide1 && activar_asteroide==true){
 			activar_asteroide = false;
 			StartCoroutine (GenerarAsteroidesGrandes());
 		}
-		if(limiteAsteroidesMedianos < 5 && activar_asteroideMediado==true){
+		if(limiteAsteroidesMedianos < GameControl.instance.subirNivelAsteroide2 && activar_asteroideMediado==true){
 			activar_asteroideMediado = false;
 			StartCoroutine (GenerarAsteroidesMedianos());
 		}

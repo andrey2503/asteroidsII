@@ -55,6 +55,8 @@ public class ControlVida : MonoBehaviour {
 		yield return new WaitForSeconds (3f);
 		GameControl.instance.numerodialogo = 0;
 		gameOver.SetActive (true);
+		GameControl.instance.subirNivelAsteroide1 = 3;
+		GameControl.instance.subirNivelAsteroide2 = 5;
 		StartCoroutine (aparecerGuardarPuntaje());
 	}
 

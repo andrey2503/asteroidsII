@@ -34,7 +34,9 @@ public class Control_puntos : MonoBehaviour {
 		if(puntoFinales>=GameControl.instance.puntosLlegar){
 			Debug.Log ("iniciar");
 			GameControl.instance.puntosLlegar = GameControl.instance.puntosLlegar + 1000;
-			GameControl.instance.numerodialogo = 1;
+			GameControl.instance.numerodialogo = GameControl.instance.numerodialogo+1;
+			GameControl.instance.subirNivelAsteroide1 = GameControl.instance.subirNivelAsteroide1+2;
+			GameControl.instance.subirNivelAsteroide2 = GameControl.instance.subirNivelAsteroide2+2;
 			ControlEscenas.instance.IniciarJuego ();
 		}
 	}// fin de sumar Puntos

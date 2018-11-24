@@ -10,6 +10,12 @@ public class GameControl : MonoBehaviour {
 	public int _vidasActuales = 2;
 	public int _puntosActuales=0000;
 	public int _puntosLlegar=1000;
+
+	//
+	public int _subirNivelAsteroide1=3;
+	public int _subirNivelAsteroide2=5;
+
+
 	// Use this for initialization
 	void Awake () {
 		if (GameControl.instance == null) {
@@ -70,5 +76,14 @@ public class GameControl : MonoBehaviour {
 	public int leerPuntaje(){
 		return PlayerPrefs.GetInt ("Best-score",000);
 	}// fin de leerpuntaje
+
+	public int subirNivelAsteroide1{
+		get { return _subirNivelAsteroide1; }
+		set { _subirNivelAsteroide1 = value; }
+	}
+	public int subirNivelAsteroide2{
+		get {return _subirNivelAsteroide2; }
+		set { _subirNivelAsteroide2 = value; }
+	}
 
 }// fin de la clase
