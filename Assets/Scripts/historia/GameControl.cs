@@ -9,11 +9,12 @@ public class GameControl : MonoBehaviour {
 	public int numeroDialogoInicio=1;
 	public int _vidasActuales = 2;
 	public int _puntosActuales=0000;
-	public int _puntosLlegar=1000;
+	public int _puntosLlegar=100;
 
 	//
-	public int _subirNivelAsteroide1=3;
-	public int _subirNivelAsteroide2=5;
+	public int _subirNivelAsteroide1=1;
+	public int _subirNivelAsteroide2=1;
+	public bool nivelEntrenamiento=true;
 
 
 	// Use this for initialization

@@ -35,11 +35,11 @@ public class Control_asteroides : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if(limiteAsteroidesGrandes < GameControl.instance.subirNivelAsteroide1 && activar_asteroide==true){
+		if(limiteAsteroidesGrandes <= GameControl.instance.subirNivelAsteroide1 && activar_asteroide==true){
 			activar_asteroide = false;
 			StartCoroutine (GenerarAsteroidesGrandes());
 		}
-		if(limiteAsteroidesMedianos < GameControl.instance.subirNivelAsteroide2 && activar_asteroideMediado==true){
+		if(limiteAsteroidesMedianos <= GameControl.instance.subirNivelAsteroide2 && activar_asteroideMediado==true){
 			activar_asteroideMediado = false;
 			StartCoroutine (GenerarAsteroidesMedianos());
 		}

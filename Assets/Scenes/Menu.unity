@@ -273,6 +273,9 @@ MonoBehaviour:
   _vidasActuales: 2
   _puntosActuales: 0
   _puntosLlegar: 1000
+  _subirNivelAsteroide1: 1
+  _subirNivelAsteroide2: 1
+  nivelEntrenamiento: 1
 --- !u!1 &1001703415
 GameObject:
   m_ObjectHideFlags: 0

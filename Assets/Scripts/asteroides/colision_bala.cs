@@ -41,6 +41,12 @@ public class colision_bala : MonoBehaviour {
 			Destroy (this.gameObject);			
 		}
 		if(meta.gameObject.tag=="Player"){
+			if (tipoAsteroide == 1) {
+				Control_asteroides.instance.subirNumeroAsteroidesGrandes ();
+
+			} else if(tipoAsteroide==2) {
+				Control_asteroides.instance.subirNumeroAsteroidesMedianos ();
+			}
 			ControlVida.instance.disminuirVida ();
 			Destroy (meta.gameObject);
 			ControlSonido.instance.sonidoMuerteJugador ();

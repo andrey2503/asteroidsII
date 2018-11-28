@@ -7,6 +7,7 @@ public class Control_puntos : MonoBehaviour {
 	public Text puntos;
 	public int puntoFinales=0000;
 	public Text puntosObtenidos;
+	public Text puntosLlegar;
 	public static Control_puntos instance;
 	void Awake(){
 		if(instance== null){
@@ -20,6 +21,7 @@ public class Control_puntos : MonoBehaviour {
 	void Start () {
 		puntos.text = GameControl.instance.puntosActuales+"";
 		puntoFinales = GameControl.instance.puntosActuales;
+		puntosLlegar.text = GameControl.instance.puntosLlegar+"";
 	}
 
 	public void setpuntosfinales(int numero){
@@ -32,11 +34,14 @@ public class Control_puntos : MonoBehaviour {
 		GameControl.instance.puntosActuales = puntoFinales;
 		puntosObtenidos.text = "" + puntoFinales;
 		if(puntoFinales>=GameControl.instance.puntosLlegar){
-			Debug.Log ("iniciar");
+			puntoFinales = GameControl.instance.puntosLlegar;
+			puntos.text = ""+puntoFinales;
+			GameControl.instance.puntosActuales=puntoFinales; 
 			GameControl.instance.puntosLlegar = GameControl.instance.puntosLlegar + 1000;
+			puntosLlegar.text = GameControl.instance.puntosLlegar+"";
 			GameControl.instance.numerodialogo = GameControl.instance.numerodialogo+1;
-			GameControl.instance.subirNivelAsteroide1 = GameControl.instance.subirNivelAsteroide1+2;
-			GameControl.instance.subirNivelAsteroide2 = GameControl.instance.subirNivelAsteroide2+2;
+			GameControl.instance.subirNivelAsteroide1 = GameControl.instance.subirNivelAsteroide1+1;
+			GameControl.instance.subirNivelAsteroide2 = GameControl.instance.subirNivelAsteroide2+1;
 			ControlEscenas.instance.IniciarJuego ();
 		}
 	}// fin de sumar Puntos

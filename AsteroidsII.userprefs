@@ -1,13 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\escenas\ControlEscenas.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\asteroides\Control_asteroides.cs">
     <Files>
       <File FileName="Assets\Scripts\player\player_engine.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\historia\GameControl.cs" Line="70" Column="2" />
-      <File FileName="Assets\Scripts\puntos\Control_puntos.cs" Line="33" Column="44" />
-      <File FileName="Assets\Scripts\vida\ControlVida.cs" Line="31" Column="52" />
-      <File FileName="Assets\Scripts\historia\StoryHelper.cs" Line="4" Column="1" />
-      <File FileName="Assets\Scripts\escenas\ControlEscenas.cs" Line="26" Column="43" />
+      <File FileName="Assets\Scripts\historia\GameControl.cs" Line="87" Column="3" />
+      <File FileName="Assets\Scripts\puntos\Control_puntos.cs" Line="38" Column="4" />
+      <File FileName="Assets\Scripts\asteroides\Control_asteroides.cs" Line="42" Column="74" />
+      <File FileName="Assets\Scripts\vida\ControlVida.cs" Line="59" Column="48" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
