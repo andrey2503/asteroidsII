@@ -2017,7 +2017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numeroDialogoInicio: 1
-  _vidasActuales: 0
+  _vidasActuales: 2
   _puntosActuales: 0
   _puntosLlegar: 1000
   _subirNivelAsteroide1: 1
