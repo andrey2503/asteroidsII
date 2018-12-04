@@ -341,7 +341,7 @@ MonoBehaviour:
   storyText: Hola cadete, felicitaciones por defender la tierra de la invasion extraterrestre
   description: 
   character: {fileID: 756828705}
-  portrait: {fileID: 21300000, guid: 7497fd82318972540af8666a234a9685, type: 3}
+  portrait: {fileID: 21300000, guid: 928a33a655e15144cb751a045e02a2dc, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -431,7 +431,7 @@ MonoBehaviour:
     nos indica que ingresaras al sector A1-D
   description: 
   character: {fileID: 756828705}
-  portrait: {fileID: 21300000, guid: 7497fd82318972540af8666a234a9685, type: 3}
+  portrait: {fileID: 21300000, guid: 928a33a655e15144cb751a045e02a2dc, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -484,7 +484,7 @@ MonoBehaviour:
     final
   description: 
   character: {fileID: 756828705}
-  portrait: {fileID: 21300000, guid: 7497fd82318972540af8666a234a9685, type: 3}
+  portrait: {fileID: 21300000, guid: 928a33a655e15144cb751a045e02a2dc, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -629,7 +629,7 @@ MonoBehaviour:
   storyText: Bien hecho cadete, espera un poco mas, ya vamos en camino
   description: 
   character: {fileID: 756828705}
-  portrait: {fileID: 21300000, guid: 7497fd82318972540af8666a234a9685, type: 3}
+  portrait: {fileID: 21300000, guid: 928a33a655e15144cb751a045e02a2dc, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -982,7 +982,7 @@ MonoBehaviour:
   storyText: Solo un poco mas, ya casi estamos contigo...
   description: 
   character: {fileID: 756828705}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 928a33a655e15144cb751a045e02a2dc, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1043,7 +1043,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: mantente en contacto...
   description: 
-  character: {fileID: 0}
+  character: {fileID: 756828705}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1087,7 +1087,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: cadete aun estas vivo?
   description: 
-  character: {fileID: 0}
+  character: {fileID: 756828705}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1385,6 +1385,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400000, guid: b20518d45890e4be59ba82946f88026c, type: 2}
+      propertyPath: portraits.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b20518d45890e4be59ba82946f88026c, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1421,6 +1425,16 @@ Prefab:
       propertyPath: setSayDialog
       value: 
       objectReference: {fileID: 263887527}
+    - target: {fileID: 11400000, guid: b20518d45890e4be59ba82946f88026c, type: 2}
+      propertyPath: portraits.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 928a33a655e15144cb751a045e02a2dc,
+        type: 3}
+    - target: {fileID: 11400000, guid: b20518d45890e4be59ba82946f88026c, type: 2}
+      propertyPath: portraits.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 928a33a655e15144cb751a045e02a2dc,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b20518d45890e4be59ba82946f88026c, type: 2}
   m_IsPrefabAsset: 0
@@ -2006,6 +2020,9 @@ MonoBehaviour:
   _vidasActuales: 0
   _puntosActuales: 0
   _puntosLlegar: 1000
+  _subirNivelAsteroide1: 1
+  _subirNivelAsteroide2: 1
+  nivelEntrenamiento: 1
 --- !u!4 &1222885673
 Transform:
   m_ObjectHideFlags: 0
